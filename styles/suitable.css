@@ -1,0 +1,9 @@
+.suitable {
+  background-color: #fff0f1;
+  padding: 48px 60px;
+  border-radius: 60px;
+
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}

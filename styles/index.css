@@ -1,0 +1,303 @@
+:root {
+  --text-primary: #0a0a0a;
+  --text-secondary: #636363;
+  --container-pad-x: 34px;
+  --container-pad-y: 32px;
+  --section-gap: 120px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fff;
+  overflow-x: clip;
+}
+.container {
+  padding: var(--container-pad-y) var(--container-pad-x);
+  max-width: 1440px;
+  margin: 0 auto;
+}
+section {
+  margin-top: var(--section-gap);
+}
+
+.title-1 {
+  font-size: 72px;
+  line-height: 88px;
+  letter-spacing: -0.8px;
+}
+.title-2 {
+  font-size: 64px;
+  line-height: 76px;
+  letter-spacing: -0.8px;
+}
+.title-3 {
+  font-size: 56px;
+  line-height: 68px;
+  letter-spacing: -0.8px;
+}
+
+.label-1 {
+  font-size: 16px;
+  line-height: 22px;
+}
+.label-3 {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 300;
+}
+
+.body-1 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+}
+.body-2 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+}
+.body-3 {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url("../assets/fonts/museo-sans-cyrl-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../assets/fonts/museo-sans-cyrl-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Museo Sans Cyrl";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../assets/fonts/museo-sans-cyrl-700.woff2") format("woff2");
+}
+
+body {
+  font-family:
+    "Museo Sans Cyrl",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    sans-serif;
+  font-weight: 500;
+}
+
+@media (max-width: 1439px) {
+  .title-1 {
+    font-size: 64px;
+    line-height: 78px;
+  }
+  .title-2 {
+    font-size: 56px;
+    line-height: 68px;
+  }
+  .title-3 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+}
+
+@media (max-width: 1279px) {
+  :root {
+    --container-pad-y: 32px;
+    --container-pad-x: 28px;
+  }
+  .title-1 {
+    font-size: 48px;
+    line-height: 58px;
+  }
+  .title-2 {
+    font-size: 44px;
+    line-height: 54px;
+  }
+  .title-3 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .body-1 {
+    font-size: 17px;
+    line-height: 26px;
+  }
+}
+
+@media (max-width: 1023px) {
+  :root {
+    --container-pad-y: 28px;
+    --container-pad-x: 24px;
+    --section-gap: 96px;
+  }
+  .title-1 {
+    font-size: 40px;
+    line-height: 48px;
+  }
+  .title-2 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .title-3 {
+    font-size: 34px;
+    line-height: 42px;
+  }
+  .body-1 {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .body-2 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .label-1 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 899px) {
+  .title-1 {
+    font-size: 36px;
+    line-height: 44px;
+  }
+  .title-2 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .title-3 {
+    font-size: 30px;
+    line-height: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --container-pad-y: 24px;
+    --container-pad-x: 20px;
+    --section-gap: 80px;
+  }
+  .title-1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .title-2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .title-3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .body-2 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .body-3 {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .label-3 {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 599px) {
+  :root {
+    --container-pad-y: 20px;
+    --container-pad-x: 16px;
+    --section-gap: 64px;
+  }
+  .title-1 {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .title-2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .title-3 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .body-1 {
+    font-size: 15px;
+    line-height: 23px;
+  }
+}
+
+@media (max-width: 424px) {
+  :root {
+    --container-pad-y: 16px;
+    --container-pad-x: 16px;
+    --section-gap: 48px;
+  }
+  .title-1 {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  .title-2 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .title-3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .body-1 {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .body-2 {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 374px) {
+  .title-1 {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .title-2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .title-3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  .body-1 {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .body-2 {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  .body-3 {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .label-3 {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}

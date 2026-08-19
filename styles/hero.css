@@ -54,7 +54,10 @@
   justify-content: center;
   align-items: center;
   gap: var(--hero-partners-gap);
-  padding-left: var(--hero-partners-pad);
+  padding-left: max(
+    var(--hero-partners-pad),
+    calc(var(--spinner-size) + var(--spinner-left) + 16px)
+  );
   padding-top: 32px;
 }
 .hero__partners-logo {
@@ -156,6 +159,7 @@
   flex-direction: column;
 }
 .hero__info-label-content .label-3 {
+  font-weight: 300;
   color: var(--text-secondary);
 }
 .hero__info-label-content .body-2 {
@@ -250,6 +254,8 @@
     display: none;
   }
   .hero-wrapper {
+    --spinner-size: 0px;
+    --spinner-left: 0px;
     --hero-title-gap: 20px;
     --cta-shift-x: 8px;
     --cta-scale: 0.6;

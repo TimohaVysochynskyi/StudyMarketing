@@ -1,0 +1,222 @@
+.why {
+  --why-gap: 24px;
+  --why-content-gap: 100px;
+  --why-left-w: 480px;
+  --why-right-w: 672px;
+  --why-col-gap: 32px;
+  --stickers-w: 480px;
+  --sticker-pad-y: 20px;
+  --sticker-pad-x: 32px;
+  --sticker-radius: 24px;
+  --labels-gap-y: 24px;
+  --labels-gap-x: 50px;
+  --label-gap: 16px;
+  --label-icon: 64px;
+  --label-glyph: 24px;
+  --label-radius: 24px;
+  --result-w: 810px;
+  --result-gap: 32px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--why-gap);
+  padding: 0 var(--block-pad-x);
+}
+.why .heading-h2 {
+  width: fit-content;
+}
+.why-content {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--why-content-gap);
+}
+.why-content__left,
+.why-content__right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--why-col-gap);
+}
+.why-content__left {
+  max-width: var(--why-left-w);
+}
+.why-content__right {
+  max-width: var(--why-right-w);
+}
+.why-content .body-2 {
+  font-weight: 700;
+}
+
+.why__stickers-wrapper {
+  width: 100%;
+  max-width: var(--stickers-w);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.why__sticker {
+  position: relative;
+  margin-top: calc(-1 * var(--sticker-overlap-k, 0) * var(--sticker-pad-y));
+  margin-left: var(--sticker-x);
+  max-width: calc(100% - var(--sticker-x));
+  width: fit-content;
+  padding: var(--sticker-pad-y) var(--sticker-pad-x);
+  background-color: #d8d7ffcc;
+  box-shadow: 0px 4px 16px 0px #00000014;
+  font-weight: 300;
+  border-radius: var(--sticker-radius);
+}
+.why__sticker:nth-child(1) {
+  --sticker-x: 6.4583%;
+  transform: rotate(-2.19deg);
+  z-index: 3;
+}
+.why__sticker:nth-child(2) {
+  --sticker-x: 30.625%;
+  --sticker-overlap-k: 1;
+  transform: rotate(3.79deg);
+  z-index: 2;
+}
+.why__sticker:nth-child(3) {
+  --sticker-x: 0%;
+  --sticker-overlap-k: 0.725;
+  transform: rotate(1.08deg);
+  z-index: 1;
+}
+.why__sticker:nth-child(4) {
+  --sticker-x: 22.9167%;
+  --sticker-overlap-k: 1.475;
+  transform: rotate(-4.04deg);
+  z-index: 2;
+}
+.why__sticker:nth-child(5) {
+  --sticker-x: 11.0417%;
+  transform: rotate(-1.35deg);
+  z-index: 1;
+}
+
+.why__labels-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--labels-gap-y) var(--labels-gap-x);
+}
+.why__label {
+  display: flex;
+  align-items: center;
+  gap: var(--label-gap);
+  font-weight: 300;
+  min-width: 0;
+}
+.why__label-icon {
+  width: var(--label-icon);
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  background: radial-gradient(50% 50% at 50% 50%, #6d6bd5 0%, #5150ca 100%);
+  border-radius: var(--label-radius);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.why__label-icon svg {
+  width: var(--label-glyph);
+  aspect-ratio: 1/1;
+}
+
+.why__result {
+  width: 100%;
+  max-width: var(--result-w);
+  margin-left: auto;
+  background-color: #fff0f1;
+  border-radius: var(--block-radius);
+  padding: var(--block-pad-y) var(--block-pad-x);
+  font-weight: 300;
+  display: flex;
+  align-items: center;
+  gap: var(--result-gap);
+}
+
+@media (hover: hover) {
+  .why:hover {
+    --double-arrow-shift: 12px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .why {
+    --why-content-gap: 64px;
+    --why-left-w: 420px;
+    --labels-gap-x: 36px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .why {
+    --why-content-gap: 48px;
+    --why-left-w: 340px;
+    --why-col-gap: 24px;
+    --labels-gap-x: 28px;
+    --labels-gap-y: 20px;
+    --label-icon: 56px;
+    --label-glyph: 22px;
+    --label-radius: 20px;
+    --sticker-pad-x: 24px;
+    --sticker-pad-y: 16px;
+    --sticker-radius: 20px;
+    --result-gap: 24px;
+  }
+}
+
+@media (max-width: 899px) {
+  .why {
+    --why-gap: 32px;
+  }
+  .why-content {
+    flex-direction: column;
+    gap: 32px;
+  }
+  .why-content__left,
+  .why-content__right {
+    max-width: none;
+  }
+  .why__result {
+    max-width: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .why {
+    --label-icon: 52px;
+    --label-glyph: 20px;
+    --labels-gap-x: 24px;
+  }
+}
+
+@media (max-width: 599px) {
+  .why {
+    --label-icon: 48px;
+    --label-glyph: 20px;
+    --label-gap: 12px;
+    --labels-gap-x: 20px;
+    --labels-gap-y: 16px;
+    --sticker-pad-x: 20px;
+    --result-gap: 20px;
+  }
+}
+
+@media (max-width: 424px) {
+  .why {
+    --label-icon: 44px;
+    --label-glyph: 18px;
+    --label-radius: 16px;
+    --sticker-pad-x: 16px;
+    --sticker-pad-y: 14px;
+    --sticker-radius: 16px;
+    --result-gap: 16px;
+  }
+}
+
+@media (max-width: 374px) {
+  .why {
+}
+}

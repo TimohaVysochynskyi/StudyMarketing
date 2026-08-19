@@ -1,0 +1,120 @@
+.terms {
+  --terms-gap: 40px;
+  --terms-title-pad-x: 60px;
+  --terms-title-w: 450px;
+  --terms-content-gap: 64px;
+  --terms-left-w: 742px;
+  --terms-right-w: 455px;
+  --terms-label-gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--terms-gap);
+}
+.terms .heading-h2 {
+  padding: 0 var(--terms-title-pad-x);
+  width: 100%;
+  max-width: var(--terms-title-w);
+}
+
+.terms-content {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--terms-content-gap);
+}
+.terms__left {
+  width: 100%;
+  max-width: var(--terms-left-w);
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: var(--terms-label-gap);
+  list-style-type: none;
+}
+
+.terms__right {
+  width: 100%;
+  max-width: var(--terms-right-w);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.terms__right .body-2 {
+  font-weight: 700;
+}
+
+@media (max-width: 1439px) {
+  .terms {
+    --terms-title-pad-x: 48px;
+    --terms-content-gap: 48px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .terms {
+    --terms-title-pad-x: 40px;
+    --terms-content-gap: 40px;
+    --terms-label-gap: 16px;
+    --feature-label-h: 58px;
+    --feature-label-pad: 24px;
+    --feature-label-gap: 14px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .terms {
+    --terms-left-w: none;
+    --terms-right-w: none;
+  }
+  .terms-content {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 899px) {
+  .terms {
+    --terms-gap: 32px;
+    --terms-title-pad-x: 32px;
+    --terms-content-gap: 32px;
+    --feature-label-h: 56px;
+    --feature-label-pad: 22px;
+    --feature-label-gap: 12px;
+    --feature-label-icon: 18px;
+  }
+}
+
+@media (max-width: 767px) {
+  .terms {
+    --terms-label-gap: 12px;
+    --feature-label-h: 54px;
+    --feature-label-pad: 20px;
+  }
+}
+
+@media (max-width: 599px) {
+  .terms {
+    --terms-gap: 24px;
+    --terms-title-pad-x: 24px;
+    --terms-content-gap: 24px;
+    --feature-label-h: 52px;
+    --feature-label-icon: 16px;
+  }
+}
+
+@media (max-width: 424px) {
+  .terms {
+    --terms-title-pad-x: 20px;
+    --terms-content-gap: 20px;
+    --terms-label-gap: 10px;
+  }
+}
+
+@media (max-width: 374px) {
+  .terms {
+    --terms-gap: 16px;
+    --terms-title-pad-x: 16px;
+    --terms-content-gap: 16px;
+    --feature-label-h: 50px;
+    --feature-label-pad: 16px;
+    --feature-label-gap: 10px;
+  }
+}

@@ -1,0 +1,115 @@
+.after {
+  --after-gap: 24px;
+  --after-left-w: 560px;
+  --after-right-w: 790px;
+  --after-img-w: 85.5696%;
+  --after-cta-w: 55.9494%;
+  --after-cta-pad-x: 7.5949cqw;
+  --after-cta-pad-y: 6.0759cqw;
+  --after-cta-gap: 4.0506cqw;
+  --double-arrow-h: 6.8354cqw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--after-gap);
+}
+.after__left {
+  width: 100%;
+  max-width: var(--after-left-w);
+  padding-left: var(--block-pad-x);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.after__list-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.after__list-wrapper .body-2 {
+  font-weight: 700;
+}
+
+.after__right {
+  position: relative;
+  container-type: inline-size;
+  width: 100%;
+  max-width: var(--after-right-w);
+  aspect-ratio: 790 / 430;
+}
+.after__img {
+  width: var(--after-img-w);
+  aspect-ratio: 676 / 388;
+  object-fit: cover;
+  object-position: top;
+  border-radius: var(--block-radius);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.after__cta {
+  width: var(--after-cta-w);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  padding: var(--after-cta-pad-y) var(--after-cta-pad-x);
+  background-color: #fff0f1;
+  border-radius: var(--block-radius);
+  display: flex;
+  align-items: center;
+  gap: var(--after-cta-gap);
+  font-weight: 300;
+}
+
+@media (hover: hover) {
+  .after__cta:hover {
+    --double-arrow-shift: calc(var(--double-arrow-h, 54px) * 12 / 54);
+  }
+}
+
+@media (max-width: 1279px) {
+  .after {
+    --after-left-w: 380px;
+    --after-cta-pad-x: 6.0759cqw;
+  }
+}
+
+@media (max-width: 1023px) {
+  .after {
+    --after-gap: 40px;
+    --after-cta-pad-x: 7.5949cqw;
+    flex-direction: column;
+  }
+  .after__left {
+    max-width: none;
+  }
+  .after__right {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 599px) {
+  .after {
+    --after-cta-pad-x: 32px;
+    --after-cta-pad-y: 32px;
+    --after-cta-gap: 24px;
+    --double-arrow-h: 54px;
+  }
+  .after__right {
+    aspect-ratio: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .after__img {
+    order: -1;
+    position: static;
+    width: 100%;
+  }
+  .after__cta {
+    position: static;
+    width: 100%;
+  }
+}

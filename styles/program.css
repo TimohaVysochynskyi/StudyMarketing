@@ -1,8 +1,7 @@
 .program {
   --program-gap: 40px;
-  --program-cal-gap: 32px;
+  --program-cal-gap: 20px;
   --program-tile-gap: 12px;
-  --program-cal-cols: 7;
   --program-tile-w: 168px;
   --program-tile-h: 124px;
   --program-tile-pad-y: 16px;
@@ -31,10 +30,7 @@
   flex: 0 1 auto;
   min-width: 0;
   display: grid;
-  grid-template-columns: repeat(
-    var(--program-cal-cols),
-    minmax(0, var(--program-tile-w))
-  );
+  grid-template-columns: repeat(7, minmax(0, var(--program-tile-w))) auto;
   gap: var(--program-tile-gap);
 }
 .program__calendar-item {
@@ -74,7 +70,8 @@
   font-weight: 700;
 }
 .program__calendar-multiply {
-  flex: none;
+  align-self: center;
+  margin-left: var(--program-cal-gap);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -140,18 +137,17 @@
 }
 
 @media (max-width: 1279px) {
+  .program__calendar {
+    grid-template-columns: repeat(4, minmax(0, var(--program-tile-w)));
+  }
+  .program__calendar-multiply {
+    margin-left: 0;
+  }
   .program {
     --program-gap: 32px;
-    --program-cal-gap: 24px;
+    --program-cal-gap: 16px;
     --program-week-w: 180px;
     --program-tile-pad-x: 16px;
-  }
-  .program__calendar-wrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .program__calendar {
-    width: 100%;
   }
   .program__calendar-multiply {
     flex-direction: row;
@@ -160,8 +156,13 @@
 }
 
 @media (max-width: 1023px) {
+  .program__calendar {
+    grid-template-columns: repeat(4, minmax(0, var(--program-tile-w)));
+  }
+  .program__calendar-multiply {
+    margin-left: 0;
+  }
   .program {
-    --program-cal-cols: 4;
     --program-tile-h: 112px;
     --program-tile-radius: 20px;
     --program-week-w: 160px;
@@ -178,8 +179,13 @@
 }
 
 @media (max-width: 767px) {
+  .program__calendar {
+    grid-template-columns: repeat(3, minmax(0, var(--program-tile-w)));
+  }
+  .program__calendar-multiply {
+    margin-left: 0;
+  }
   .program {
-    --program-cal-cols: 3;
     --program-cal-gap: 20px;
     --program-tile-h: 104px;
     --program-tile-gap: 10px;
@@ -202,8 +208,13 @@
 }
 
 @media (max-width: 424px) {
+  .program__calendar {
+    grid-template-columns: repeat(2, minmax(0, var(--program-tile-w)));
+  }
+  .program__calendar-multiply {
+    margin-left: 0;
+  }
   .program {
-    --program-cal-cols: 2;
     --program-tile-h: 96px;
     --program-tile-pad-x: 12px;
   }

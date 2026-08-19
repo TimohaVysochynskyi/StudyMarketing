@@ -1,0 +1,115 @@
+.who {
+  --who-gap: 72px;
+  --who-left-w: 590px;
+  --who-right-w: 590px;
+  --who-left-gap: 32px;
+  --who-row-gap: 32px;
+  --who-avatar: 96px;
+  --who-list-w: 350px;
+  background-color: #e0dfff;
+  border-radius: var(--block-radius);
+  padding: var(--block-pad-y) var(--block-pad-x);
+  display: flex;
+  justify-content: space-between;
+  gap: var(--who-gap);
+}
+.who__left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--who-left-gap);
+  width: 100%;
+  max-width: var(--who-left-w);
+}
+.who__left-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--who-row-gap);
+  position: relative;
+}
+.who__images-wrapper {
+  position: relative;
+  flex: none;
+  width: calc(var(--who-avatar) * 208 / 96);
+  min-height: var(--who-avatar);
+}
+.who__img {
+  width: var(--who-avatar);
+  aspect-ratio: 1/1;
+  flex-shrink: 0;
+  border: 2px solid #ffffff;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+}
+.who__img:nth-child(2) {
+  left: calc(var(--who-avatar) * 56 / 96);
+  z-index: 2;
+}
+.who__img:nth-child(3) {
+  left: calc(var(--who-avatar) * 112 / 96);
+  z-index: 1;
+}
+.who__left-row .mark-list {
+  flex: 1;
+  min-width: max-content;
+  max-width: var(--who-list-w);
+}
+
+.who__right {
+  width: 100%;
+  max-width: var(--who-right-w);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.who__right .heading-h2 {
+  font-weight: 700;
+}
+.who__right .heading-h5 {
+  font-weight: 300;
+}
+
+@media (max-width: 1279px) {
+  .who {
+    --who-gap: 56px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .who {
+    --who-gap: 40px;
+    --who-left-w: none;
+    --who-right-w: none;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .who {
+    --who-row-gap: 24px;
+    --who-avatar: 88px;
+  }
+}
+
+@media (max-width: 599px) {
+  .who {
+    --who-avatar: 80px;
+  }
+}
+
+@media (max-width: 424px) {
+  .who {
+    --who-row-gap: 16px;
+    --who-avatar: 72px;
+  }
+}
+
+@media (max-width: 374px) {
+  .who {
+    --who-avatar: 64px;
+  }
+}

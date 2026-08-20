@@ -1,25 +1,24 @@
 /* CTA BUTTON */
 .cta-button {
-  --cta-shadow-y: 8px;
-  --cta-label-x: -22.26px;
-  --cta-label-y: 31.83px;
+  --cta-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 184 187' preserveAspectRatio='none'%3E%3Cpath d='M163.223 58.6286C190.096 73.9843 190.096 112.732 163.223 128.088L71.8147 180.321C39.8151 198.607 0 175.501 0 138.646L0 48.0709C0 11.2154 39.8152 -11.8902 71.8147 6.39523L163.223 58.6286Z'/%3E%3C/svg%3E");
+  --cta-shadow-y: 4.3478cqw;
+  --cta-label-x: -12.0978cqw;
+  --cta-label-y: 17.2989cqw;
   --cta-label-angle: -30deg;
   --cta-arrow-angle: 0deg;
   --cta-transition: 0.3s ease;
 
   position: relative;
   isolation: isolate;
+  container-type: inline-size;
 
-  width: 184px;
-  height: 187px;
+  height: var(--cta-h, 187px);
+  aspect-ratio: 184 / 187;
 
   color: #fff;
   text-decoration: none;
 
   translate: calc(-1 * var(--cta-shift-x, 24px)) 0;
-  scale: var(--cta-scale, 1);
-  transform-origin: 100% 100%;
-  margin-left: calc(-184px * (1 - var(--cta-scale, 1)));
   transition: translate var(--cta-transition);
 
   outline: none;
@@ -30,9 +29,9 @@
   position: absolute;
   inset: 0;
 
-  clip-path: path(
-    "M163.223 58.6286C190.096 73.9843 190.096 112.732 163.223 128.088L71.8147 180.321C39.8151 198.607 0 175.501 0 138.646L0 48.0709C0 11.2154 39.8152 -11.8902 71.8147 6.39523L163.223 58.6286Z"
-  );
+  mask-image: var(--cta-mask);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
 }
 .cta-button::before {
   z-index: -2;
@@ -46,10 +45,10 @@
 }
 .cta-button__text {
   position: absolute;
-  top: 88px;
-  left: 50px;
-  width: 123.34px;
-  height: 20px;
+  top: 47.8261cqw;
+  left: 27.1739cqw;
+  width: 67.0326cqw;
+  height: 10.8696cqw;
   white-space: nowrap;
   font-weight: 700;
   translate: var(--cta-label-x) var(--cta-label-y);
@@ -58,12 +57,18 @@
     translate var(--cta-transition),
     rotate var(--cta-transition);
 }
+@media (min-width: 600px) {
+  .cta-button__text {
+    font-size: 7.6087cqw;
+    line-height: 10.8696cqw;
+  }
+}
 .cta-button__icon {
   position: absolute;
   top: 50%;
-  left: 107.34px;
-  width: 16px;
-  height: 4px;
+  left: 58.337cqw;
+  width: 8.6957cqw;
+  height: 2.1739cqw;
   translate: 0 -50%;
 }
 .cta-button__icon::before,
@@ -73,7 +78,7 @@
   inset: 0;
   border-radius: 99px;
   background-color: #6d6bd5;
-  transform-origin: calc(100% - 2px) center;
+  transform-origin: calc(100% - 1.087cqw) center;
   transition: rotate var(--cta-transition);
 }
 .cta-button__icon::before {
@@ -85,15 +90,15 @@
 .cta-button:hover,
 .cta-button:focus-visible,
 .cta-button:active {
-  --cta-shadow-y: 8px;
-  --cta-label-x: -20px;
+  --cta-shadow-y: 4.3478cqw;
+  --cta-label-x: -10.8696cqw;
   --cta-label-y: 0px;
   --cta-label-angle: 0deg;
   --cta-arrow-angle: 45deg;
   --cta-shift-x: 0px;
 }
 .cta-button:active {
-  --cta-shadow-y: 2px;
+  --cta-shadow-y: 1.087cqw;
 }
 @media (prefers-reduced-motion: reduce) {
   .cta-button {
@@ -108,12 +113,12 @@
   .cta-button {
     --cta-shift-x: 0px;
     --cta-arrow-angle: 45deg;
-    --cta-scale: 1;
     --cta-shadow-y: 6px;
+    --cta-h: 56px;
 
     width: 100%;
-    height: 56px;
-    margin-left: 0;
+    aspect-ratio: auto;
+    padding-top: var(--cta-shadow-y);
 
     display: flex;
     align-items: center;
@@ -121,7 +126,7 @@
   }
   .cta-button::before,
   .cta-button::after {
-    clip-path: none;
+    mask-image: none;
     border-radius: 999px;
   }
   .cta-button__text {
@@ -139,8 +144,14 @@
     position: relative;
     top: auto;
     left: auto;
+    width: 16px;
+    height: 4px;
     flex: none;
     translate: none;
+  }
+  .cta-button__icon::before,
+  .cta-button__icon::after {
+    transform-origin: calc(100% - 2px) center;
   }
 }
 

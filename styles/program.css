@@ -19,7 +19,7 @@
   gap: var(--program-gap);
 }
 .program .heading-h2 {
-  padding: 0 var(--block-pad-x);
+  padding: 0 var(--section-pad-x);
 }
 .program__calendar-wrapper {
   display: flex;
@@ -94,7 +94,7 @@
 }
 
 .program__list {
-  padding: 0 var(--block-pad-x);
+  padding: 0 var(--section-pad-x);
   list-style-type: none;
 }
 .program__list-item {
@@ -120,7 +120,7 @@
 
 .program__how {
   margin-top: var(--program-how-top);
-  padding: 0 var(--block-pad-x);
+  padding: 0 var(--section-pad-x);
   display: flex;
   flex-direction: column;
   gap: var(--program-how-gap);

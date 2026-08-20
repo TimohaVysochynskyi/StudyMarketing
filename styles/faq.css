@@ -13,7 +13,7 @@
   gap: var(--faq-gap);
 }
 .faq .heading-h2 {
-  padding-left: var(--block-pad-x);
+  padding-left: var(--section-pad-x);
   width: 100%;
   max-width: var(--faq-title-w);
 }

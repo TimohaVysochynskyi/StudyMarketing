@@ -16,7 +16,7 @@
 .after__left {
   width: 100%;
   max-width: var(--after-left-w);
-  padding-left: var(--block-pad-x);
+  padding-left: var(--section-pad-x);
   display: flex;
   flex-direction: column;
   gap: 40px;

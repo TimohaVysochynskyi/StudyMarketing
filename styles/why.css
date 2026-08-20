@@ -20,7 +20,6 @@
   display: flex;
   flex-direction: column;
   gap: var(--why-gap);
-  padding: 0 var(--block-pad-x);
 }
 .why .heading-h2 {
   width: fit-content;

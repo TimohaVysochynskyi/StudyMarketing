@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 0 var(--block-pad-x);
+  padding: 0 var(--section-pad-x);
 }
 .practice__title-wrapper .heading-h2 {
   width: 100%;

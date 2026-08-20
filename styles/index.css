@@ -2,6 +2,7 @@
   --text-primary: #0a0a0a;
   --text-secondary: #636363;
   --block-pad-x: 60px;
+  --section-pad-x: 60px;
   --block-pad-y: 48px;
   --block-radius: 60px;
   --container-pad-x: 34px;
@@ -22,7 +23,8 @@ body {
   max-width: 1440px;
   margin: 0 auto;
 }
-section {
+section,
+footer {
   margin-top: var(--section-gap);
 }
 
@@ -376,6 +378,7 @@ body {
 @media (max-width: 1279px) {
   :root {
     --block-pad-x: 48px;
+    --section-pad-x: 48px;
     --block-pad-y: 40px;
     --block-radius: 48px;
   }
@@ -408,6 +411,7 @@ body {
 @media (max-width: 1023px) {
   :root {
     --block-pad-x: 40px;
+    --section-pad-x: 40px;
     --block-pad-y: 36px;
     --block-radius: 40px;
   }
@@ -440,6 +444,7 @@ body {
 @media (max-width: 899px) {
   :root {
     --block-pad-x: 32px;
+    --section-pad-x: 0px;
     --block-pad-y: 32px;
     --block-radius: 36px;
   }

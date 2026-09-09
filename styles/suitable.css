@@ -3,8 +3,9 @@
   --suitable-row-gap: 32px;
   --suitable-right-pad: 26px;
   --suitable-left-w: 500px;
+  --mark-list-color: #c952ff;
 
-  background-color: #fff0f1;
+  background-color: #f2d7ff;
   padding: var(--block-pad-y) var(--block-pad-x);
   border-radius: var(--block-radius);
 
@@ -12,6 +13,7 @@
   gap: var(--suitable-gap);
 }
 .suitable__left {
+  flex-shrink: 0;
   width: 100%;
   max-width: var(--suitable-left-w);
   display: flex;
@@ -19,8 +21,9 @@
   justify-content: space-between;
   gap: 32px;
 }
-.suitable__left .heading-h2 {
-  width: fit-content;
+.suitable__left .heading-h3 {
+  font-weight: 700;
+  color: #8900c7;
 }
 .suitable__row {
   display: flex;

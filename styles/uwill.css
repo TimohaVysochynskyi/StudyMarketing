@@ -8,9 +8,13 @@
   --uwill-list-gap-y: 40px;
   --uwill-rect-pad: 32px;
   --uwill-rect-radius: 40px;
+  --uwill-plaque-w: min(1168px, 100cqw);
+  --uwill-title-size: calc(var(--uwill-plaque-w) * 40 / 1168);
+  --uwill-sec-size: calc(var(--uwill-plaque-w) * 36 / 1168);
 
   position: relative;
   isolation: isolate;
+  container-type: inline-size;
 
   display: flex;
   flex-direction: column;
@@ -35,8 +39,9 @@
   width: 100%;
   max-width: 1168px;
   aspect-ratio: 1168 / 307;
-  background-color: #ed1c24;
-  color: #fff;
+  background-color: #a1c700;
+  color: #3f4a3c;
+  font-family: var(--font-heading);
 
   mask-image: var(--title-mask);
   mask-size: 100% 100%;
@@ -54,6 +59,8 @@
   left: 0;
   width: var(--title-secondary-width);
   height: var(--title-secondary-height);
+  font-size: var(--uwill-sec-size);
+  line-height: 1.1875;
   font-weight: 300;
 }
 .uwill__title-main {
@@ -61,6 +68,8 @@
   right: 0;
   width: var(--title-main-width);
   height: var(--title-main-height);
+  font-size: var(--uwill-title-size);
+  line-height: 1.1875;
   font-weight: 700;
 }
 
@@ -78,8 +87,8 @@
   flex-direction: column;
   gap: 8px;
 }
-.uwill__list-item .heading-h5 {
-  font-weight: 500;
+.uwill__list-item .heading-h6 {
+  font-weight: 300;
 }
 .uwill__list-item .body-1 {
   font-weight: 300;
@@ -117,6 +126,8 @@
 @media (max-width: 899px) {
   .uwill {
     --uwill-gap: 40px;
+    --uwill-title-size: 30px;
+    --uwill-sec-size: 27px;
   }
   .uwill-spinner {
     display: none;
@@ -145,6 +156,8 @@
 @media (max-width: 767px) {
   .uwill {
     --uwill-gap: 32px;
+    --uwill-title-size: 28px;
+    --uwill-sec-size: 25px;
     --uwill-list-cols: 2;
     --uwill-list-gap-x: 32px;
     --uwill-list-gap-y: 28px;
@@ -154,6 +167,8 @@
 @media (max-width: 599px) {
   .uwill {
     --uwill-gap: 28px;
+    --uwill-title-size: 26px;
+    --uwill-sec-size: 23px;
     --uwill-list-gap-x: 24px;
     --uwill-list-gap-y: 24px;
     --uwill-rect-pad: 24px;
@@ -164,6 +179,8 @@
 @media (max-width: 424px) {
   .uwill {
     --uwill-list-cols: 1;
+    --uwill-title-size: 24px;
+    --uwill-sec-size: 21px;
     --uwill-rect-pad: 20px;
     --uwill-rect-radius: 24px;
   }
@@ -171,6 +188,8 @@
 
 @media (max-width: 374px) {
   .uwill {
+    --uwill-title-size: 22px;
+    --uwill-sec-size: 20px;
     --uwill-rect-pad: 16px;
     --uwill-rect-radius: 20px;
   }

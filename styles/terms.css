@@ -1,4 +1,5 @@
 .terms {
+  --feature-label-icon-bg: #a1c700;
   --terms-gap: 40px;
   --terms-title-w: 450px;
   --terms-content-gap: 64px;
@@ -9,12 +10,11 @@
   flex-direction: column;
   gap: var(--terms-gap);
 }
-.terms .heading-h2 {
+.terms > .heading-h3 {
   padding: 0 var(--section-pad-x);
-  width: 100%;
-  max-width: var(--terms-title-w);
+  font-weight: 700;
+  color: #3f4a3c;
 }
-
 .terms-content {
   display: flex;
   justify-content: space-between;

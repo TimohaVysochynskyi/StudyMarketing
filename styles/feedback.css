@@ -12,15 +12,14 @@
   --grid-radius: 20px;
   --grid-item-gap: 16px;
   --grid-avatar: 48px;
-  --grid-fade-h: 160px;
-  --grid-btn-h: 48px;
-  --grid-btn-pad-x: 32px;
   display: flex;
   flex-direction: column;
   gap: var(--feedback-gap);
 }
-.feedback .heading-h2 {
+.feedback > .heading-h3 {
   padding: 0 var(--section-pad-x);
+  font-weight: 700;
+  color: #3f4a3c;
 }
 
 .feedback__stats {
@@ -61,8 +60,8 @@
   border-radius: 100%;
   background-image: conic-gradient(
     from var(--ring-from) at 50% 50%,
-    #ed1c24 0deg,
-    #2c2b7c 360deg
+    #81a000 0deg,
+    #a1c700 360deg
   );
   mask-image:
     radial-gradient(
@@ -91,21 +90,18 @@
     calc(var(--stats-size) / 2 + (var(--stats-ring) - var(--stats-border)) / 2);
 }
 .feedback__stats-item::before {
-  background-color: #ed1c24;
+  background-color: #81a000;
   rotate: var(--ring-from);
 }
 .feedback__stats-item::after {
   background-color: color-mix(
     in srgb,
-    #2c2b7c calc(var(--ring-percent) * 1%),
-    #ed1c24
+    #a1c700 calc(var(--ring-percent) * 1%),
+    #81a000
   );
   rotate: calc(var(--ring-from) + var(--ring-percent) * 3.6deg);
 }
 
-.feedback__grid-wrapper {
-  position: relative;
-}
 .feedback__grid {
   list-style-type: none;
   column-count: var(--grid-cols);
@@ -136,38 +132,6 @@
 }
 .feedback__grid-item .body-2 {
   font-weight: 300;
-}
-
-.feedback__grid-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
-}
-.feedback__grid-gradient {
-  width: 100%;
-  height: var(--grid-fade-h);
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
-}
-.feedback__grid-button-wrapper {
-  width: 100%;
-  height: 80px;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-}
-.feedback__grid-button {
-  pointer-events: auto;
-  height: var(--grid-btn-h);
-  padding: 4px var(--grid-btn-pad-x);
-  align-content: center;
-  border-radius: 100px;
-  border: 1px solid #ed1c24;
-  text-decoration: none;
-  outline: none;
-  color: var(--text-primary);
 }
 
 @media (max-width: 1439px) {
@@ -210,9 +174,6 @@
     --grid-radius: 16px;
     --grid-item-gap: 12px;
     --grid-avatar: 44px;
-    --grid-fade-h: 120px;
-    --grid-btn-h: 44px;
-    --grid-btn-pad-x: 24px;
   }
 }
 
@@ -227,7 +188,5 @@
     --feedback-gap: 32px;
     --grid-pad-x: 20px;
     --grid-avatar: 40px;
-    --grid-fade-h: 96px;
-    --grid-btn-h: 40px;
   }
 }

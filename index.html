@@ -37,6 +37,8 @@
         fbq('track', 'PageView');
     </script>
 
+    <link rel="preload" href="./assets/fonts/grunt-grotesk-700.woff2" as="font" type="font/woff2" crossorigin>
+
     <link rel="stylesheet" href="./styles/index.css">
     <link rel="stylesheet" href="./styles/components.css">
 
@@ -76,28 +78,42 @@
                         class="hero__img">
                 </div>
                 <div class="hero__title-section">
-                    <h1 class="hero__title-bg title-1">
+                    <h1 class="hero__title-bg">
                         <span class="hero__title-main">
-                            ПРАКТИЧНИЙ КУРС<br>З МАРКЕТИНГУ
+                            <span class="hero__title-accent">БЕЗКОШТОВНИЙ</span>
+                            <span>ПРАКТИЧНИЙ КУРС</span>
+                            <span>З МАРКЕТИНГУ</span>
                         </span>
                         <span class="hero__title-secondary">для мікробізнесу</span>
                     </h1>
                     <a href="https://forms.gle/pvnfVuw4ZxJBYEeg9" target="_blank" class="cta-button">
-                        <div class="cta-button__text body-3">
-                            ЗАПИСАТИСЬ
-                            <div class="cta-button__icon"></div>
-                        </div>
+                        <span class="cta-button__text body-3">Записатись</span>
+                        <span class="cta-button__icon">
+                            <svg viewBox="0 0 11 20" fill="none" stroke="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.747314 0.664368L8.74731 9.66437L0.747314 18.6644" stroke-width="2" />
+                            </svg>
+                        </span>
                     </a>
                 </div>
                 <div class="hero__bottom">
-                    <div class="mark-list-wrapper">
-                        <p class="body-2">Допоможемо</p>
-                        <ul class="mark-list">
-                            <li class="body-1">системно розібрати ваш бізнес</li>
-                            <li class="body-1">зрозуміти клієнтів</li>
-                            <li class="body-1">сформувати позиціонування</li>
-                            <li class="body-1">створити маркетинговий план на 90 днів</li>
-                        </ul>
+                    <div class="hero__bottom-row">
+                        <div class="mark-list-wrapper">
+                            <p class="body-2">Допоможемо</p>
+                            <ul class="mark-list">
+                                <li class="body-1">системно розібрати ваш бізнес</li>
+                                <li class="body-1">зрозуміти клієнтів</li>
+                                <li class="body-1">сформувати позиціонування</li>
+                                <li class="body-1">створити маркетинговий план на 90 днів</li>
+                            </ul>
+                        </div>
+                        <div class="hero__note">
+                            <p class="body-1">Навчання відбувається в межах проєкту «РОСТИ: розвиток та оновлення
+                                спільнот з турботою про людей», який реалізує ІСАР Єднання за фінансування Фундації
+                                Міндеру.</p>
+                            <p class="body-1">Курс для мешканців Харківської, Сумської, Миколаївської, Запорізької та
+                                Чернігівської областей</p>
+                        </div>
                     </div>
                     <div class="hero__info-wrapper">
                         <div class="feature-label">
@@ -148,7 +164,7 @@
 
         <section class="suitable">
             <div class="suitable__left">
-                <h2 class="heading-h2 gradient-title">Чи підходить<br> вам це навчання?</h2>
+                <h2 class="heading-h3">Чи підходить<br> вам це навчання?</h2>
                 <div class="suitable__row">
                     <div class="double-arrow">
                         <svg class="arrows-element__left" viewBox="0 0 49 54" xmlns="http://www.w3.org/2000/svg">
@@ -185,7 +201,7 @@
         </section>
 
         <section class="why">
-            <h2 class="heading-h2 gradient-title">Чому вам це потрібно?</h2>
+            <h2 class="heading-h3">Чому вам це потрібно?</h2>
             <div class="why-content">
                 <div class="why-content__left">
                     <h3 class="body-2">Маркетинг малого бізнесу часто виглядає так:</h3>
@@ -291,49 +307,49 @@
             <img src="./assets/svg/base-for-your-business-spinner.svg" alt="Start earning more"
                 class="spinner uwill-spinner">
 
-            <h2 class="uwill__title-bg heading-h2">
+            <h2 class="uwill__title-bg">
                 <span class="uwill__title-secondary">За час навчання</span>
-                <span class="uwill__title-main">ВИ СТВОРИТЕ ВЛАСНУ<br>МАРКЕТИНГОВУ ОСНОВУ ДЛЯ БІЗНЕСУ</span>
+                <span class="uwill__title-main">ВИ СТВОРИТЕ ВЛАСНУ МАРКЕТИНГОВУ<br>ОСНОВУ ДЛЯ БІЗНЕСУ</span>
             </h2>
 
             <ul class="uwill__list">
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Аналіз бізнесу</h3>
+                    <h3 class="heading-h6">Аналіз бізнесу</h3>
                     <p class="body-1">зрозумієте поточний стан бізнесу, ринок та конкурентне середовище.</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Цільова аудиторія</h3>
+                    <h3 class="heading-h6">Цільова аудиторія</h3>
                     <p class="body-1">визначите, хто ваш клієнт, його потреби, мотивацію та поведінку.</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Позиціонування</h3>
+                    <h3 class="heading-h6">Позиціонування</h3>
                     <p class="body-1">сформуєте чітке розуміння, чим ваш продукт відрізняється від інших</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Контент</h3>
+                    <h3 class="heading-h6">Контент</h3>
                     <p class="body-1">визначите, про що говорити з аудиторією та як будувати комунікацію.</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Канали та точки контакту</h3>
+                    <h3 class="heading-h6">Канали та точки контакту</h3>
                     <p class="body-1">зрозумієте, де шукати клієнтів і як вибудувати шлях до покупки</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Реклама</h3>
+                    <h3 class="heading-h6">Реклама</h3>
                     <p class="body-1">розберете основні інструменти просування та оцінку їхньої ефективності</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Продуктова лінійка</h3>
+                    <h3 class="heading-h6">Продуктова лінійка</h3>
                     <p class="body-1">подивитеся, як продукти та послуги можуть працювати як система</p>
                 </li>
                 <li class="uwill__list-item">
-                    <h3 class="heading-h5">Стратегія</h3>
+                    <h3 class="heading-h6">Стратегія</h3>
                     <p class="body-1">сформуєте власний план маркетингових дій на 90 днів</p>
                 </li>
             </ul>
         </section>
 
         <section class="program">
-            <h2 class="heading-h2 gradient-title">Навчальна програма</h2>
+            <h2 class="heading-h3">Навчальна програма</h2>
             <div class="program__calendar-wrapper">
                 <div class="program__calendar">
                     <div class="program__calendar-item program__calendar-item_active">
@@ -477,49 +493,65 @@
 
         <section class="practice">
             <div class="practice__title-wrapper">
-                <h2 class="heading-h2 gradient-title">Практика</h2>
+                <h2 class="heading-h3">Практика</h2>
                 <p class="body-1">Більшість практичних завдань ви виконуєте на основі власного бізнесу, продукту або
                     послуги.</p>
             </div>
             <ul class="practice__steps">
                 <li class="practice__steps-item">
-                    <span class="title-1">01</span>
-                    <h3 class="heading-h5">Аналіз</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">01</span>
+                        <h3 class="practice__steps-label heading-h6">Аналіз</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">02</span>
-                    <h3 class="heading-h5">ЦА</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">02</span>
+                        <h3 class="practice__steps-label heading-h6">ЦА</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">03</span>
-                    <h3 class="heading-h5">Позиціонування</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">03</span>
+                        <h3 class="practice__steps-label heading-h6">Позиціонування</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">04</span>
-                    <h3 class="heading-h5">Контент</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">04</span>
+                        <h3 class="practice__steps-label heading-h6">Контент</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">05</span>
-                    <h3 class="heading-h5">Канали</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">05</span>
+                        <h3 class="practice__steps-label heading-h6">Канали</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">06</span>
-                    <h3 class="heading-h5">Продажі</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">06</span>
+                        <h3 class="practice__steps-label heading-h6">Продажі</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">07</span>
-                    <h3 class="heading-h5">Продукт</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">07</span>
+                        <h3 class="practice__steps-label heading-h6">Продукт</h3>
+                    </div>
                 </li>
                 <li class="practice__steps-item">
-                    <span class="title-1">08</span>
-                    <h3 class="heading-h5">Стратегія</h3>
+                    <div class="practice__steps-content">
+                        <span class="practice__steps-num heading-h2">08</span>
+                        <h3 class="practice__steps-label heading-h6">Стратегія</h3>
+                    </div>
                 </li>
             </ul>
         </section>
 
         <section class="after">
             <div class="after__left">
-                <h2 class="heading-h2 gradient-title">
+                <h2 class="heading-h3">
                     Після завершення навчального етапу
                 </h2>
                 <div class="after__list-wrapper">
@@ -553,7 +585,7 @@
 
         <section class="who">
             <div class="who__left">
-                <h2 class="heading-h2 gradient-title">Хто навчає?</h2>
+                <h2 class="heading-h3">Хто навчає?</h2>
                 <div class="who__left-row">
                     <div class="who__images-wrapper">
                         <img src="./assets/images/authors/1.jpg" alt="Author portrait image" class="who__img">
@@ -568,7 +600,7 @@
                 </div>
             </div>
             <div class="who__right">
-                <p class="heading-h2">Команда практиків з маркетингу</p>
+                <p class="heading-h3">Команда практиків з маркетингу</p>
                 <p class="heading-h5">
                     Фахівці з практичним досвідом роботи з маркетингом малого бізнесу, позиціонуванням, комунікаціями та
                     просуванням.</p>
@@ -576,7 +608,7 @@
         </section>
 
         <section class="feedback">
-            <h2 class="heading-h2 gradient-title">Результати першої хвилі навчання:</h2>
+            <h2 class="heading-h3">Результати першої хвилі навчання:</h2>
             <div class="feedback__stats">
                 <div class="feedback__stats-item">
                     <div class="feedback__stats-gradient"></div>
@@ -599,7 +631,8 @@
                 <ul class="feedback__grid">
                     <li class="feedback__grid-item">
                         <div class="feedback__grid-row">
-                            <img src="" alt="Client feedback avatar" class="feedback__grid-avatar">
+                            <img src="./assets/images/feedbacks/avatar.webp" alt="Client feedback avatar"
+                                class="feedback__grid-avatar">
                             <h3 class="body-1">Дмитро Мовчан</h3>
                         </div>
                         <p class="body-2">
@@ -639,16 +672,6 @@
                         </div>
                         <p class="body-2">
                             Приєднуюсь до вдячності! Все на високому рівні! ❤️
-                        </p>
-                    </li>
-                    <li class="feedback__grid-item">
-                        <div class="feedback__grid-row">
-                            <img src="./assets/images/feedbacks/marty.jpg" alt="Client feedback avatar"
-                                class="feedback__grid-avatar">
-                            <h3 class="body-1">Марти Костюченко</h3>
-                        </div>
-                        <p class="body-2">
-                            Всі дуже класні та професійні. Дякую за ваш вклад в мою хоч і не маленьку але власну справу.
                         </p>
                     </li>
                     <li class="feedback__grid-item">
@@ -698,17 +721,11 @@
                     </li>
 
                 </ul>
-                <div class="feedback__grid-bottom">
-                    <div class="feedback__grid-gradient"></div>
-                    <div class="feedback__grid-button-wrapper">
-                        <a href="javascript:void(0)" class="feedback__grid-button body-3">Всі відгуки</a>
-                    </div>
-                </div>
             </div>
         </section>
 
         <section class="terms">
-            <h2 class="heading-h2 gradient-title">Умови участі</h2>
+            <h2 class="heading-h3">Умови участі</h2>
             <div class="terms-content">
                 <ul class="terms__left">
                     <li class="feature-label">
@@ -834,7 +851,7 @@
         </section>
 
         <section class="faq">
-            <h2 class="heading-h2 gradient-title">Питання та відповіді</h2>
+            <h2 class="heading-h3">Питання та відповіді</h2>
             <ul class="faq__list">
                 <li>
                     <details class="faq__list-item" name="faq">
@@ -1024,10 +1041,13 @@
                 <h2 class="heading-h2">Готові систематизувати маркетинг свого бізнесу?</h2>
                 <div class="footer__cta">
                     <a href="https://forms.gle/pvnfVuw4ZxJBYEeg9" target="_blank" class="cta-button">
-                        <div class="cta-button__text body-3">
-                            ЗАПИСАТИСЬ
-                            <div class="cta-button__icon"></div>
-                        </div>
+                        <span class="cta-button__text body-3">Записатись</span>
+                        <span class="cta-button__icon">
+                            <svg viewBox="0 0 11 20" fill="none" stroke="currentColor"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.747314 0.664368L8.74731 9.66437L0.747314 18.6644" stroke-width="2" />
+                            </svg>
+                        </span>
                     </a>
                     <p class="label-3">Заповнення форми займає приблизно 10–15 хвилин.</p>
                 </div>

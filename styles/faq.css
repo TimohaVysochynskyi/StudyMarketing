@@ -12,8 +12,10 @@
   display: flex;
   gap: var(--faq-gap);
 }
-.faq .heading-h2 {
+.faq > .heading-h3 {
   padding-left: var(--section-pad-x);
+  font-weight: 700;
+  color: #3f4a3c;
   width: 100%;
   max-width: var(--faq-title-w);
 }
@@ -35,8 +37,8 @@
 }
 .faq__list-item:hover,
 .faq__list-item[open] {
-  background-color: #fff0f1;
-  border-color: #fff0f1;
+  background-color: #f7ffd7;
+  border-color: #f7ffd7;
 }
 .faq__list-summary {
   list-style: none;
@@ -50,7 +52,7 @@
   display: none;
 }
 .faq__list-item .heading-h5 {
-  font-weight: 500;
+  font-weight: 300;
 }
 .faq__list-item .body-1 {
   font-weight: 300;
@@ -61,8 +63,8 @@
   width: var(--faq-button);
   height: var(--faq-button);
   border-radius: var(--faq-button-radius);
-  background-color: #fff0f1;
-  color: #ed1c24;
+  background-color: #81a000;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -71,6 +73,10 @@
 .faq__list-button svg {
   width: var(--faq-icon);
   aspect-ratio: 1/1;
+}
+.faq__list-item[open] .faq__list-button {
+  background-color: transparent;
+  color: #81a000;
 }
 .faq__list-button svg:last-child,
 .faq__list-item[open] .faq__list-button svg:first-child {

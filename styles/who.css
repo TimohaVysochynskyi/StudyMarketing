@@ -1,12 +1,13 @@
 .who {
   --who-gap: 72px;
+  --mark-list-color: #a900f5;
   --who-left-w: 590px;
   --who-right-w: 590px;
   --who-left-gap: 32px;
   --who-row-gap: 32px;
   --who-avatar: 96px;
   --who-list-w: 350px;
-  background-color: #e0dfff;
+  background-color: #f2d7ff;
   border-radius: var(--block-radius);
   padding: var(--block-pad-y) var(--block-pad-x);
   display: flex;
@@ -66,8 +67,12 @@
   flex-direction: column;
   gap: 24px;
 }
-.who__right .heading-h2 {
+.who__left > .heading-h3 {
   font-weight: 700;
+  color: #8900c7;
+}
+.who__right .heading-h3 {
+  font-weight: 300;
 }
 .who__right .heading-h5 {
   font-weight: 300;

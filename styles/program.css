@@ -18,8 +18,10 @@
   flex-direction: column;
   gap: var(--program-gap);
 }
-.program .heading-h2 {
+.program > .heading-h3 {
   padding: 0 var(--section-pad-x);
+  font-weight: 700;
+  color: #3f4a3c;
 }
 .program__calendar-wrapper {
   display: flex;
@@ -45,8 +47,8 @@
   border-radius: var(--program-tile-radius);
 }
 .program__calendar-item_active {
-  background-color: #ed1c24;
-  border-color: #ed1c24;
+  background-color: #a900f5;
+  border-color: #a900f5;
 }
 .program__calendar-item .heading-h6 {
   font-weight: 700;

@@ -1,5 +1,14 @@
 .practice {
-  container-type: inline-size;
+  --practice-dot: 11px;
+  --practice-dot-ring: 4px;
+  --practice-line: 3px;
+  --practice-arrow: 13px;
+  --practice-tail: 120px;
+  --practice-line-gap: 20px;
+  --practice-row-gap: 24px;
+  --practice-label-gap: 16px;
+  --practice-tail-v: 32px;
+
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -10,114 +19,164 @@
   gap: 10px;
   padding: 0 var(--section-pad-x);
 }
-.practice__title-wrapper .heading-h2 {
-  width: 100%;
-  max-width: 400px;
+.practice__title-wrapper .heading-h3 {
+  font-weight: 700;
+  color: #3f4a3c;
 }
 .practice__title-wrapper .body-1 {
   font-weight: 300;
 }
 .practice__steps {
-  --practice-k: 5.2538;
-  --practice-circle: min(260px, calc(100cqw / var(--practice-k)));
-  --practice-gap: calc(var(--practice-circle) * 56 / 260);
-  --practice-step: calc((var(--practice-circle) + var(--practice-gap)) / 2);
-  --practice-row-pitch: calc(2 * var(--practice-step));
+  position: relative;
+  padding: 0 var(--section-pad-x);
   list-style-type: none;
+
   display: grid;
-  grid-template-columns: repeat(7, var(--practice-step)) var(--practice-circle);
-  grid-template-rows: auto;
+  grid-template-columns: repeat(7, minmax(0, 1fr)) var(--practice-tail);
+  grid-template-rows: auto var(--practice-line) auto;
+  row-gap: var(--practice-line-gap);
+}
+.practice__steps::before {
+  content: "";
+  position: absolute;
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  inset: 0;
+  background-color: #a1c700;
+}
+.practice__steps::after {
+  content: "";
+  position: absolute;
+  grid-column: -2 / -1;
+  grid-row: 2 / 3;
+  justify-self: end;
+  align-self: center;
+  width: var(--practice-arrow);
+  height: var(--practice-arrow);
+  margin-right: calc(var(--practice-arrow) * 0.2071);
+  border-top: var(--practice-line) solid #a1c700;
+  border-right: var(--practice-line) solid #a1c700;
+  rotate: 45deg;
 }
 .practice__steps-item {
+  grid-row: 1 / -1;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+.practice__steps-item::before {
+  content: "";
   position: relative;
-  place-self: start;
-  width: var(--practice-circle);
-  aspect-ratio: 1/1;
-  border-radius: 100%;
+  z-index: 1;
+  grid-row: 2;
+  justify-self: start;
+  align-self: center;
+  width: var(--practice-dot);
+  height: var(--practice-dot);
+  border-radius: 50%;
+  background-color: #81a000;
+  box-shadow: 0 0 0 var(--practice-dot-ring) #fff;
+}
+.practice__steps-content {
+  width: max-content;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  flex-direction: column;
 }
-.practice__steps-item:nth-child(even) {
-  margin-top: var(--practice-step);
-  z-index: 2;
+.practice__steps-item:nth-child(odd) .practice__steps-content {
+  grid-row: 1;
+  align-self: end;
 }
-.practice__steps-item:nth-child(1) {
-  background-color: #ed1c24;
+.practice__steps-item:nth-child(even) .practice__steps-content {
+  grid-row: 3;
+  align-self: start;
 }
-.practice__steps-item:nth-child(2) {
-  background-color: #d11e31;
+.practice__steps-num {
+  font-weight: 700;
+  color: #81a000;
 }
-.practice__steps-item:nth-child(3) {
-  background-color: #b6203d;
-}
-.practice__steps-item:nth-child(4) {
-  background-color: #9a224a;
-}
-.practice__steps-item:nth-child(5) {
-  background-color: #7f2556;
-}
-.practice__steps-item:nth-child(6) {
-  background-color: #632763;
-}
-.practice__steps-item:nth-child(7) {
-  background-color: #48296f;
-}
-.practice__steps-item:nth-child(8) {
-  background-color: #2c2b7c;
-}
-.practice__steps-item .title-1 {
-  position: absolute;
-  z-index: 0;
-  font-size: calc(var(--practice-circle) * 72 / 260);
-  line-height: 1;
-  color: #ffffff33;
-}
-.practice__steps-item .heading-h5 {
-  position: relative;
-  z-index: 1;
-  max-width: 82%;
-  text-align: center;
-  color: #fff;
+.practice__steps-label {
+  font-weight: 300;
+  color: #000;
 }
 
 @media (max-width: 1439px) {
-  .practice__steps {
-    --practice-k: 2.823;
-    grid-template-columns: repeat(3, var(--practice-step)) var(--practice-circle);
-    grid-template-rows: var(--practice-row-pitch) auto;
+  .practice {
+    --practice-tail: 115px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .practice {
+    --practice-tail: 110px;
+    --practice-line-gap: 18px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .practice {
+    --practice-tail: 104px;
+    --practice-line-gap: 16px;
+  }
+}
+
+@media (max-width: 899px) {
+  .practice {
+    --practice-tail: 100px;
+    --practice-line-gap: 14px;
   }
 }
 
 @media (max-width: 767px) {
+  .practice {
+    --practice-row-gap: 24px;
+  }
   .practice__steps {
-    --practice-k: 2.2154;
-    grid-template-columns: repeat(2, var(--practice-step)) var(--practice-circle);
-    grid-template-rows: repeat(2, var(--practice-row-pitch)) auto;
+    grid-template-columns: var(--practice-dot) minmax(0, 1fr);
+    grid-template-rows: repeat(8, auto) var(--practice-tail-v);
+    row-gap: var(--practice-row-gap);
+    column-gap: var(--practice-label-gap);
   }
-  .practice__steps-item:nth-child(even) {
-    margin-top: 0;
-    z-index: 1;
+  .practice__steps::before {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    justify-self: center;
+    inset: 0 auto;
+    width: var(--practice-line);
   }
-  .practice__steps-item:nth-child(3n + 2) {
-    margin-top: var(--practice-step);
-    z-index: 2;
+  .practice__steps::after {
+    grid-column: 1 / 2;
+    grid-row: -2 / -1;
+    justify-self: center;
+    align-self: end;
+    margin-right: 0;
+    margin-bottom: calc(var(--practice-arrow) * 0.2071);
+    rotate: 135deg;
+  }
+  .practice__steps-item {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    grid-template-columns: subgrid;
+    grid-template-rows: auto auto;
+  }
+  .practice__steps-item::before {
+    grid-row: 1;
+    justify-self: center;
+  }
+  .practice__steps-content {
+    display: contents;
+  }
+  .practice__steps-num {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .practice__steps-label {
+    grid-column: 2;
+    grid-row: 2;
   }
 }
 
-@media (max-width: 424px) {
-  .practice__steps {
-    --practice-k: 1.6077;
-    grid-template-columns: var(--practice-step) var(--practice-circle);
-    grid-template-rows: repeat(3, var(--practice-row-pitch)) auto;
-  }
-  .practice__steps-item:nth-child(3n + 2) {
-    margin-top: 0;
-    z-index: 1;
-  }
-  .practice__steps-item:nth-child(even) {
-    margin-top: var(--practice-step);
-    z-index: 2;
+@media (max-width: 599px) {
+  .practice {
+    --practice-row-gap: 20px;
+    --practice-label-gap: 14px;
   }
 }
